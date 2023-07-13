@@ -3,6 +3,7 @@ from langchain.callbacks import get_openai_callback
 from langchain.memory import ConversationBufferMemory, ConversationSummaryMemory
 from langchain.chains import ConversationChain
 from langchain.chat_models import ChatOpenAI
+from get_env import load_env
 
 
 def track_tokens_usage(llm, query):
@@ -34,9 +35,12 @@ def chain_tokens_usage(chain, query):
 
 
 if __name__ == '__main__':
+
+    print(load_env('abc'))
     llm = OpenAI(
         temperature=0,
-        openai_api_key='<OPENAI-API-KEY>',
+        openai_api_key='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',
+        openai_api_base='https://proxy1.one1.chat',
         model_name="gpt-3.5-turbo-16k"
     )
     # --------- 不具备上下文理解能的调用方式
