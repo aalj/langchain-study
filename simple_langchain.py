@@ -36,10 +36,9 @@ def chain_tokens_usage(chain, query):
 
 if __name__ == '__main__':
 
-    print(load_env('abc'))
     llm = OpenAI(
         temperature=0,
-        openai_api_key='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',
+        openai_api_key=load_env('OPENAI_API_KEY'),
         openai_api_base='https://proxy1.one1.chat',
         model_name="gpt-3.5-turbo-16k"
     )
