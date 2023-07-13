@@ -39,7 +39,7 @@ if __name__ == '__main__':
     llm = OpenAI(
         temperature=0,
         openai_api_key=load_env('OPENAI_API_KEY'),
-        openai_api_base='https://proxy1.one1.chat',
+        openai_api_base='https://proxy1.one1.chat/v1/',
         model_name="gpt-3.5-turbo-16k"
     )
     # --------- 不具备上下文理解能的调用方式
